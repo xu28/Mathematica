@@ -1,0 +1,129 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      3622,        121]
+NotebookOptionsPosition[      3023,        101]
+NotebookOutlinePosition[      3414,        117]
+CellTagsIndexPosition[      3371,        114]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Normal distribution", "Subtitle",
+ CellChangeTimes->{{3.872219510839135*^9, 
+  3.872219519881859*^9}},ExpressionUUID->"6c28451d-f988-4c00-aeef-\
+940494b4f921"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{"f", 
+     RowBox[{"(", "x", ")"}]}], "=", 
+    RowBox[{
+     FractionBox["1", 
+      RowBox[{"\[Sigma]", 
+       SqrtBox[
+        RowBox[{"2", "\[Pi]"}]]}]], 
+     SuperscriptBox["e", 
+      RowBox[{"-", 
+       FractionBox[
+        SuperscriptBox[
+         RowBox[{"(", 
+          RowBox[{"x", "-", "\[Mu]"}], ")"}], "2"], 
+        RowBox[{"2", 
+         SuperscriptBox["\[Sigma]", "2"]}]]}]]}]}], "*)"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{"DynamicModule", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"\[Sigma]", "=", "1"}], "}"}], "\:ff0c", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"Slider", "[", 
+       RowBox[{
+        RowBox[{"Dynamic", "[", "\[Sigma]", "]"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"0.5", ",", "2.0"}], "}"}]}], "]"}], ",", 
+      RowBox[{"Dynamic", "[", 
+       RowBox[{"Plot", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"Exp", "[", 
+           RowBox[{
+            RowBox[{"-", 
+             RowBox[{
+              RowBox[{"(", 
+               RowBox[{"x", "/", "\[Sigma]"}], ")"}], "^", "2"}]}], "/", 
+            "2"}], "]"}], "/", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"Sqrt", "[", 
+             RowBox[{"2", "Pi"}], "]"}], "\[Sigma]"}], ")"}]}], ",", 
+         RowBox[{"{", 
+          RowBox[{"x", ",", 
+           RowBox[{"-", "3"}], ",", "3"}], "}"}]}], "]"}], "]"}]}], "}"}]}], 
+   "]"}]}]], "Input",
+ CellChangeTimes->{{3.872219537014822*^9, 3.872219545984354*^9}},
+ CellLabel->"In[13]:=",ExpressionUUID->"7d420f4b-ade9-4a34-a53b-c553dde7c8af"],
+
+Cell[BoxData[
+ RowBox[{"DynamicModule", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"\[Sigma]", "=", "1"}], "}"}], " ", "\:ff0c", " ", 
+   RowBox[{"{", 
+    RowBox[{
+     SliderBox[Dynamic[$CellContext`\[Sigma]], {0.5, 2.}], ",", 
+     DynamicBox[ToBoxes[
+       Plot[
+       Exp[(-($CellContext`x/$CellContext`\[Sigma])^2)/2]/(
+        Sqrt[2 Pi] $CellContext`\[Sigma]), {$CellContext`x, -3, 3}], 
+       StandardForm],
+      ImageSizeCache->{198., {65., 70.}}]}], "}"}]}], "]"}]], "Output",
+ CellChangeTimes->{3.872219558895672*^9},
+ CellLabel->"Out[13]=",ExpressionUUID->"13571d0c-b099-4a51-9714-74ee8a55c553"]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{808, 663},
+WindowMargins->{{Automatic, 0}, {Automatic, 0}},
+FrontEndVersion->"13.1 for Mac OS X ARM (64-bit) (June 16, 2022)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"c19c1ea2-443d-482f-858c-def61183d647"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 165, 3, 53, "Subtitle",ExpressionUUID->"6c28451d-f988-4c00-aeef-940494b4f921"],
+Cell[CellGroupData[{
+Cell[770, 29, 1607, 51, 119, "Input",ExpressionUUID->"7d420f4b-ade9-4a34-a53b-c553dde7c8af"],
+Cell[2380, 82, 615, 15, 154, "Output",ExpressionUUID->"13571d0c-b099-4a51-9714-74ee8a55c553"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
